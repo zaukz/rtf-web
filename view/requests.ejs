@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="icon" href="/Images/logo.png">
+  <meta name="description" content="The best Minectaft network!">
+  <meta name="author" content="zAukz">
+
+  <link rel="stylesheet" href="/CSS/global.css">
+  <link rel="stylesheet" href="/CSS/contact.css">
+
+  <title>RT Network | Requests</title>
+</head>
+<body>
+  <!--Navbar-->
+  <div class="navbar">
+    <div class="menu-mobile">
+      <a href="index.html">
+        <div class="logo">
+          <img src="images/logo.png" alt="Server logo" class="logo-img">
+          <h3 class="server-name">RT Network</h3>
+        </div>
+      </a>
+
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="index.html" class="link">Home</a>
+      <a href="rules.html" class="link">Rules</a>
+    <!--  <a href="staff.html" class="link">Staff</a> -->
+      <a href="#" class="link active">Requests</a>
+    </div>
+  </div>
+
+  <!--Header-->
+  <section id="header">
+    <div class="content">
+      <div class="info">
+        <p class="minecraft-server-ip">mc.example.com</p>
+        <h1 class="title"><span>RT</span> REQUESTS</h1>
+      </div>
+      <p class="description">
+        View all our request types below to contact our staff team!
+      </p>
+    </div>
+  </section>
+
+  <!--Requests-->
+  <section id="requests">
+    <div class="content">
+      <h2 class="section-title">Request Options</h2>
+      <p style="color:#D2D0D0;">
+        Abusing the request system—whether it’s spamming, lying, or trying to cheat your way into something—will get you blacklisted from making future requests. The best applications go into detail, use good grammar and mechanics, are honest, and clearly have time put into them.
+      </p>
+
+      <div class="request-options">
+        <div class="request-box" data-type="staff">
+          <h3>Apply for Staff</h3>
+          <p>Apply for our staff team as a trainee moderator.</p>
+        </div>
+        <div class="request-box" data-type="media">
+          <h3>Apply for Media</h3>
+          <p>Apply for Media rank (YouTube, TikTok, etc.)</p>
+        </div>
+        <div class="request-box" data-type="report-bug">
+          <h3>Report a Bug</h3>
+          <p>Report a bug/glitch that you discovered on the server.</p>
+        </div>
+        <div class="request-box" data-type="report-faction">
+          <h3>Report a Faction</h3>
+          <p>Report a faction you believe to be breaking the rules.</p>
+        </div>
+        <div class="request-box" data-type="report-player">
+          <h3>Report a Player</h3>
+          <p>Report a player that you think has broken our rules.</p>
+        </div>
+        <div class="request-box" data-type="suggest-feature">
+          <h3>Suggest a Feature</h3>
+          <p>Suggest a new feature or idea for the server.</p>
+        </div>
+        <div class="request-box" data-type="appeal-punishment">
+          <h3>Appeal a Punishment</h3>
+          <p>Appeal a punishment you believe to be unjustified.</p>
+        </div>
+        <div class="request-box" data-type="data-deletion">
+          <h3>Data Deletion</h3>
+          <p>Request to have your data deleted. (Not guaranteed)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add a black overlay element -->
+  <div class="overlay" id="overlay" style="display: none;"></div>
+
+
+
+
+  
+  <!-- Pop-up Form -->
+  <div class="pop-up-form" id="pop-up-form" style="display: none;">
+    <h2 id="pop-up-title"></h2>
+    <button class="close-button" style="color:white;text-decoration:underline;">Close</button>
+    <form action="" method="POST" id="staff-form" style="display: none;">
+      <!-- Apply for Staff form fields -->
+      <div class="row">
+        <label for="staff-name">* What is your Minecraft username?</label>
+        <input type="text" required id="staff-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="staff-discord-name">* What is your discord username?</label>
+        <input type="text" required id="staff-discord-name" name="What is your discord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="staff-email">* How old are you?</label>
+        <input type="text" required id="staff-email" name="How old are you?" placeholder="You must be at least 14 years old.">
+      </div>
+      <div class="row">
+        <label for="staff-email">* What timezone are you in?</label>
+        <input type="text" required id="staff-email" name="What timezone are you in?" placeholder="ECT">
+      </div>
+      <div class="row">
+        <label for="staff-message">* How often can you be active on the server?</label>
+        <input type="text" required id="staff-email" name="How often can you be active on the server?">
+      </div>
+      <div class="row">
+        <label for="staff-message">* Why do you want to be a staff member on the RT Network?</label>
+        <textarea required id="staff-message" name="What do you want to be a staff member on the RT Network?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* What qualities make a good staff member?</label>
+        <textarea required id="staff-message" name="What qualities make a good staff member?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* What are some of your strengths and weaknesses?</label>
+        <textarea required id="staff-message" name="What are some of your strengths and weaknesses?" placeholder="Don't say you have no weaknesses, everybody does."></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* Have you ever been staff on a Minecraft server before? If so, which server(s), and what was your role?</label>
+        <textarea required id="staff-message" name="Have you ever been staff on a Minecraft server before? If so, which server(s), and what was your role?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* Have you ever been banned or punished on a Minecraft server before? If so, explain why.</label>
+        <textarea required id="staff-message" name="Have you ever been banned or punished on a Minecraft server before? If so, explain why."></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* What would you do if a friend was caught breaking the rules?</label>
+        <textarea required id="staff-message" name="What would you do if a friend was caught breaking the rules?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* How would you respond if a player accused you of abusing your staff powers?</label>
+        <textarea required id="staff-message" name="How would you respond is a player accusd you of abusing your staff powers?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* A new player is struggling to understand the rules and keeps breaking them unintentionally. How do you handle the situation?</label>
+        <textarea required id="staff-message" name="A new player is struggling to understand the rules and keeps breaking them unintentionally. How do you handle the situation?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* A player is intentionally trying to break the server rules (e.g., spamming, griefing, being toxic). What steps would you take?</label>
+        <textarea required id="staff-message" name="A player is intentionally trying to break the server rules (e.g., spamming, griefing, being toxic). What steps would you take?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* Two staff members are arguing in chat, making the situation uncomfortable for players. How do you respond?</label>
+        <textarea required id="staff-message" name="Two staff members are arguing in chat, making the situation uncomfortable for players. How do you respond?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* A well-known player is accused of duping items, but they deny it. How would you investigate and handle this situation?</label>
+        <textarea required id="staff-message" name="A well-known player is accused of duping items, but they deny it. How would you investigate and handle this situation?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* Someone is advertising another server in chat and DMs. How do you respond?</label>
+        <textarea required id="staff-message" name="Someone is advertising another server in chat and DMs. How do you respond?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* What would you do to help improve the server and its community?</label>
+        <textarea required id="staff-message" name="What would you do to help improve the server and its community?"></textarea>
+      </div>
+      <div class="row">
+        <label for="staff-message">* Anything else we should know?</label>
+        <textarea required id="staff-message" name="Anything else we should know?"></textarea>
+      </div>
+      <div class="form-footer">
+        <p class="alert">Questions marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+
+    
+    <form action="" method="POST" id="media-form" style="display: none;">
+      <!-- Apply for Media form fields -->
+      <div class="row">
+        <label for="media-name">* What is your Minecraft username?</label>
+        <input type="text" required id="media-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="media-discord-name">* What is your discord username?</label>
+        <input type="text" required id="media-discord-name" name="What is your discord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="media-channel">* What type of media do you create (YouTube, TikTok, etc.)?</label>
+        <input type="text" required id="media-channel" name="What type of media do you create (YouTube, TikTok, etc.)?" placeholder="YouTube">
+      </div>
+      <div class="row">
+        <label for="media-content">* What type of content do you create?</label>
+        <input type="text" required id="media-content" name="What type of content do you create?">
+      </div>
+      <div class="row">
+        <label for="media-audience">* What is your current audience size?</label>
+        <input type="number" required id="media-audience" name="What is your current audience size?" placeholder="1000">
+      </div>
+      <div class="row">
+        <label for="rank-usage">* Why do you want Media rank on RT Network?</label>
+        <textarea required id="staff-message" name="What do you want Media rank on RT Network?"></textarea>
+      </div>
+      <div class="form-footer">
+        <p class="alert">Fields marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+
+
+    
+    <form action="" method="POST" id="report-bug-form" style="display: none;">
+      <!-- Report a Bug form fields -->
+      <div class="row">
+        <label for="report-bug-name">* What is your Minecraft username?</label>
+        <input type="text" required id="report-bug-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="report-bug-discord-name">What is your discord username?</label>
+        <input type="text" id="report-bug-discord-name" name="What is your dsicord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="report-bug-description">* Describe the bug you are experiencing.</label>
+        <textarea required id="report-bug-description" name="Describe the bug you are experiencing."></textarea>
+      </div>
+      <div class="row">
+        <label for="report-bug-steps">* What can we do to reproduce the bug?</label>
+        <textarea required id="report-bug-steps" name="What can we do to reproduce the bug?" placeholder="To reproduce the bug, do the following..."></textarea>
+      </div>
+      <div class="form-footer">
+        <p class="alert">Fields marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+
+
+    
+    <form action="" method="POST" id="report-faction-form" style="display: none;">
+      <!-- Report a Faction form fields -->
+      <div class="row">
+        <label for="report-faction-name">* What is your Minecraft username?</label>
+        <input type="text" required id="report-faction-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="report-faction-discord-name">What is your discord username?</label>
+        <input type="text" id="report-faction-discord-name" name="What is your discord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="report-faction-name">* What is the name of the faction you want to report?</label>
+        <input type="text" required id="report-faction-name" name="What is the name of the faction you want to report?">
+      </div>
+      <div class="row">
+        <label for="report-faction-owner">* What is the Minecraft username of this faction's owner?</label>
+        <input type="text" required id="report-faction-name" name="What is the Minecraft username of this faction's owner?">
+      </div>
+      <div class="row">
+        <label for="report-faction-reason">* Why are you reporting this faction?</label>
+        <textarea required id="report-faction-reason" name="Why are you reporting this faction?"></textarea>
+      </div>
+      <div class="form-footer">
+        <p class="alert">Fields marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+
+    
+    <form action="" method="POST" id="report-player-form" style="display: none;">
+      <!-- Report a Player form fields -->
+      <div class="row">
+        <label for="report-player-name">* What is your Minecraft username?</label>
+        <input type="text" required id="report-player-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="report-player-discord-name">What is your discord username?</label>
+        <input type="text" id="report-player-discord-name" name="What is your discord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="report-player-name">* What is the Minecraft username of the player you are reporting?</label>
+        <input type="text" required id="report-player-name" name="What is the Minecraft username of the player you are reporting?">
+      </div>
+      <div class="row">
+        <label for="report-player-reason">* Why are you reporting this player?</label>
+        <textarea required id="report-player-reason" name="Why are you reporting this player?"></textarea>
+      </div>
+      <div class="form-footer">
+        <p class="alert">Fields marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+
+    
+    <form action="" method="POST" id="suggest-feature-form" style="display: none;">
+      <!-- Suggest a Feature form fields -->
+      <div class="row">
+        <label for="suggest-feature-name">* What is your Minecraft username?</label>
+        <input type="text" required id="suggest-feature-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="suggest-feature-discord-name">What is your discord username?</label>
+        <input type="text" id="suggest-feature-discord-name" name="What is your discord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="suggest-feature-description">* What would you like to see added to the RT Network?</label>
+        <textarea required id="suggest-feature-description" name="What would you like to see added to the RT Network?" placeholder="The feature would..."></textarea>
+      </div>
+      <div class="row">
+        <label for="suggest-feature-benefits">* How would this feature benefit the server and its community?</label>
+        <textarea required id="suggest-feature-benefits" name="How would this feature benefit the server and its community?" placeholder="The feature would benefit the server by..."></textarea>
+      </div>
+      <div class="form-footer">
+        <p class="alert">Fields marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+
+    
+    <form action="" method="POST" id="appeal-punishment-form" style="display: none;">
+      <!-- Appeal a Punishment form fields -->
+      <div class="row">
+        <label for="appeal-punishment-name">* What is your Minecraft username?</label>
+        <input type="text" required id="appeal-punishment-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="appeal-punishment-discord-name">What is your discord username?</label>
+        <input type="text" id="appeal-punishment-discord-name" name="What is your discord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="appeal-punishment-discord-name">* What punishment are you appealing?</label>
+        <input type="text" required id="appeal-punishment-discord-name" name="What punishment are you appealing?" placeholder="I am appealing punishment ID #123456">
+      </div>
+      <div class="row">
+        <label for="appeal-punishment-reason">* Why are you appealing this punishment?</label>
+        <textarea required id="appeal-punishment-reason" name="Why are you appealing this punishment?" placeholder="I am appealing the punishment because..."></textarea>
+      </div>
+      <div class="row">
+        <label for="appeal-punishment-explanation">* Please go into detail about why you were punished, along with context.</label>
+        <textarea required id="appeal-punishment-explanation" name="Please go into detail about why you were punished, along with context." placeholder="The circumstances surrounding the punishment were..."></textarea>
+      </div>
+      <div class="row">
+        <label for="appeal-punishment-discord-name">If you know, which staff member punished you?</label>
+        <input type="text" id="appeal-punishment-staff-name" name="If you know, which staff member punished you?" placeholder="zaukz">
+      </div>
+      <div class="form-footer">
+        <p class="alert">Fields marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+
+
+    
+    <form action="" method="POST" id="data-deletion-form" style="display: none;">
+      <!-- Data Deletion form fields -->
+      <div class="row">
+        <label for="data-deletion-name">* What is your Minecraft username?</label>
+        <input type="text" required id="data-deletion-name" name="What is your Minecraft username?" placeholder="zAukz">
+      </div>
+      <div class="row">
+        <label for="data-deletion-discord-name">What is your discord username?</label>
+        <input type="text" id="data-deletion-discord-name" name="What is your discord username?" placeholder="zaukz">
+      </div>
+      <div class="row">
+        <label for="appeal-punishment-discord-name">* What data do you want us to delete?</label>
+        <input type="text" required id="data-deletion-type" name="What data do you want us to delete?">
+      </div>
+      <div class="row">
+        <label for="data-deletion-reason">* Why do you want this data deleted?</label>
+        <textarea required id="data-deletion-reason" name="Why do you want this data deleted?" placeholder="I am requesting data deletion because..."></textarea>
+      </div>
+      <div class="form-footer">
+        <p class="alert">Fields marked with * are required</p>
+        <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <!--Footer-->
+  <footer id="footer">
+    <p class="copyright">&copy; 2025 <span class="server-name-footer">RT Network</span>. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://discord.gg/33645a4DmB" class="link discord-link-footer"><i class="fa-brands fa-discord"></i></a>
+    </div>
+  </footer>
+</body>
+
+<style>
+  
+  /* Requests */
+  #requests .content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+  }
+
+  #requests .content .section-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--white-color);
+      position: relative;
+  }
+
+  #requests .content .section-title::before {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      width: 150px;
+      height: 1px;
+      border-radius: 5px;
+      background: var(--description-color);
+  }
+
+  #requests .content .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      border-radius: 5px;
+      background: var(--main-color);
+  }
+
+  #requests .content .request-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  #requests .content .request-options .request-box {
+    background: var(--stats-background);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #requests .content .request-options .request-box:hover {
+    transform: scale(1.05);
+  }
+
+  #requests .content .request-options .request-box h3 {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  #requests .content .request-options .request-box p {
+    color: var(--description-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Style the pop-up form */
+  .pop-up-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background-color);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .pop-up-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px; /* Add some padding to the bottom of the form */
+  }
+
+  .pop-up-form h2 {
+      color: var(--white-color);
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 700;
+  }
+
+  .pop-up-form .row {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 10px;
+      width: 100%;
+  }
+
+  .pop-up-form .row label {
+      color: var(--description-color);
+      font-size: 15px;
+      line-height: 1.6;
+  }
+
+  .pop-up-form .row input {
+      background: var(--stats-background);
+      border: none;
+      padding: 20px 25px;
+      font-size: 17px;
+      color: var(--white-color);
+      outline: none;
+      border-radius: 5px;
+      transition: 0.2s;
+  }
+
+  .pop-up-form .row textarea {
+      background: var(--stats-background);
+      padding: 15px 20px;
+      font-size: 15px;
+      outline: none;
+      line-height: 1.6;
+      border-radius: 5px;
+      color: var(--white-color);
+      font-family: var(--main-font);
+      border: none;
+      transition: 0.2s;
+      resize: vertical;
+      overflow-y: auto;
+      min-height: 200px;
+      max-height: 350px;
+      min-width: 100px;
+      justify-content: center;
+  }
+
+  .pop-up-form .row input:focus, .pop-up-form .row textarea:focus, .pop-up-form .row input:hover, .pop-up-form .row textarea:hover {
+      background: var(--how-to-join-button-background);
+  }
+
+  .pop-up-form .form-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+  }
+
+  .pop-up-form .form-footer button {
+      background: var(--copy-ip-button-background);
+      border: 2px solid var(--main-color);
+      border-radius: 3px;
+      padding: 10px 30px;
+      color: var(--white-color);
+      font-size: 17px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+      display: flex;
+      gap: 10px;
+      margin-top: 45px;
+  }
+
+  .pop-up-form .form-footer button:hover {
+      opacity: 0.8;
+  }
+
+  .pop-up-form .form-footer .alert {
+      color: var(--description-color);
+      font-size: 15px;
+  }
+
+  .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+  }
+</style>
+
+<script>
+  // Get the request boxes
+  const requestBoxes = document.querySelectorAll('.request-box');
+
+  // Get the pop-up form
+  const popUpForm = document.getElementById('pop-up-form');
+
+  // Get the black overlay
+  const overlay = document.getElementById('overlay');
+
+  // Add event listeners to the request boxes
+  requestBoxes.forEach((box) => {
+    box.addEventListener('click', () => {
+      // Get the type of the request box
+      const type = box.getAttribute('data-type');
+
+      // Set the title and subject of the pop-up form
+      const title = box.querySelector('h3').textContent;
+      document.getElementById('pop-up-title').textContent = title;
+
+      // Show the corresponding form
+      const forms = popUpForm.querySelectorAll('form');
+      forms.forEach((form) => {
+        form.style.display = 'none';
+      });
+      const formId = `${type}-form`;
+      const form = document.getElementById(formId);
+      form.style.display = 'block';
+
+      // Show the pop-up form and overlay
+      popUpForm.style.display = 'block';
+      overlay.style.display = 'block';
+
+      // Fade in the pop-up form and overlay
+      setTimeout(() => {
+        popUpForm.style.opacity = 1;
+        overlay.style.opacity = 1;
+      }, 100);
+
+      // Prevent scrolling on the body
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Add event listener to the close button
+  popUpForm.querySelector('.close-button').addEventListener('click', () => {
+    // Fade out the pop-up form and overlay
+    popUpForm.style.opacity = 0;
+    overlay.style.opacity = 0;
+
+    // Hide the pop-up form and overlay after fade out
+    setTimeout(() => {
+      popUpForm.style.display = 'none';
+      overlay.style.display = 'none';
+    }, 300);
+
+    // Allow scrolling on the body
+    document.body.style.overflow = 'auto';
+  });
+
+  // Add event listeners to the form submit buttons
+  const forms = popUpForm.querySelectorAll('form');
+  forms.forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Get the form data
+      const formData = new FormData(form);
+
+      // Create a Discord webhook embed
+      const embed = {
+        title: form.id,
+        description: '',
+        fields: [],
+        color: 0xff3939,
+      };
+
+      // Add form fields to the embed
+      for (const [key, value] of formData) {
+        if (value !== '') {
+          embed.fields.push({
+            name: key,
+            value: value,
+            inline: false,
+          });
+        }
+      }
+
+      // Check if the embed exceeds the character limit
+      if (JSON.stringify(embed).length > 6000) {
+        // Split the embed into multiple embeds
+        const embeds = [];
+        let currentEmbed = { ...embed };
+        currentEmbed.fields = [];
+
+        for (const field of embed.fields) {
+          if (JSON.stringify(currentEmbed).length + JSON.stringify(field).length > 6000) {
+            embeds.push(currentEmbed);
+            currentEmbed = { ...embed };
+            currentEmbed.fields = [field];
+          } else {
+            currentEmbed.fields.push(field);
+          }
+        }
+
+        embeds.push(currentEmbed);
+
+        // Send the embeds to the Discord webhook
+        embeds.forEach((embed) => {
+          fetch('https://discord.com/api/webhooks/1370610906572001330/zNHDI5-eu98mKi7oHTFVFr4fs3tWsLY94N38ra9_mxyC9DIHyGwfRrLOo8tPj3UWDUbx', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              embeds: [embed],
+            }),
+          });
+        });
+      } else {
+        // Send the embed to the Discord webhook
+        fetch('https://discord.com/api/webhooks/1370610906572001330/zNHDI5-eu98mKi7oHTFVFr4fs3tWsLY94N38ra9_mxyC9DIHyGwfRrLOo8tPj3UWDUbx', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            content: '<@&1357556658775130265>',
+            embeds: [embed],
+          }),
+        });
+      }
+
+      // Fade out the pop-up form and overlay
+      popUpForm.style.opacity = 0;
+      overlay.style.opacity = 0;
+
+      // Hide the pop-up form and overlay after fade out
+      setTimeout(() => {
+        popUpForm.style.display = 'none';
+        overlay.style.display = 'none';
+      }, 300);
+
+      // Allow scrolling on the body
+      document.body.style.overflow = 'auto';
+    });
+  });
+</script>
+
+<script src="js/script.js"></script>
+<script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
+</html>
