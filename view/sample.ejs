@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/Style.css" />
+    <!-- Public is the root folder which is why it has /CSS -->
+  </head>
+  <body>
+    <img
+      src="<%= '/Images/background.png' %>"
+      alt=""
+    /><!-- Public is the root folder which is why it has /Images -->
+
+    <h1><%= HelloText %></h1>
+    <!-- Render in javascript into the ejs -->
+    <form action="/api/post" method="post">
+      <input name="text" type="text" placeholder="input" />
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>
